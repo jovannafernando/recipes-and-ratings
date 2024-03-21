@@ -1,6 +1,6 @@
 # recipes-and-ratings
 **Authors: Jovanna Fernando and Sia Patodia**
-	---
+<hr>
 
 ## Introduction
 
