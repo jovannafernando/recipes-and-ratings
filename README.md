@@ -73,8 +73,9 @@ The collected data is organized into tabular formats as descriped below:
 
 **Cleaned DataFrame Head**
 (Only Important columsn extracted for display)
+
 |   recipe_id | submitted           |   num_tags |   average_rating |   average_rating_per_recipe |
-|------------:|:--------------------|-----------:|-----------------:|----------------------------:|
+|------------|--------------------|-----------|-----------------|----------------------------|
 |      333281 | 2008-10-27 00:00:00 |         14 |              4.5 |                           4 |
 |      453467 | 2011-04-11 00:00:00 |          9 |              5   |                           5 |
 |      306168 | 2008-05-30 00:00:00 |         10 |              4.6 |                           5 |
