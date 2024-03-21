@@ -68,15 +68,18 @@ The collected data is organized into tabular formats as descriped below:
 
 5. **Adding 'average_rating_per_recipe' Column:** To facilitate analysis, we calculated the average rating for each recipe and added it as a new column in the DataFrame. This provides a convenient way to access the average rating for each recipe, enabling comparative analyses and identifying highly-rated recipes.
 
+6. **Deriving 'num_tags' Column:** To enhance our dataset, we extracted the number of tags associated with each recipe by applying the len() function to the 'tags' column. This transformation allows us to quantify the level of categorization for each recipe and explore potential relationships between the number of tags and recipe ratings more effectively.
 
-**DataFrame Head**
-|   recipe_id | submitted           | tags                                                                                                                                                                                                                        |   average_rating |   average_rating_per_recipe |
-|------------:|:--------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------:|----------------------------:|
-|      333281 | 2008-10-27 00:00:00 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'for-large-groups', 'desserts', 'lunch', 'snacks', 'cookies-and-brownies', 'chocolate', 'bar-cookies', 'brownies', 'number-of-servings'] |              4.5 |                           4 |
-|      453467 | 2011-04-11 00:00:00 | ['60-minutes-or-less', 'time-to-make', 'cuisine', 'preparation', 'north-american', 'for-large-groups', 'canadian', 'british-columbian', 'number-of-servings']                                                               |              5   |                           5 |
-|      306168 | 2008-05-30 00:00:00 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |              4.6 |                           5 |
-|      306168 | 2008-05-30 00:00:00 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |              4.6 |                           5 |
-|      306168 | 2008-05-30 00:00:00 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |              4.6 |                           5 | 
+
+**Cleaned DataFrame Head**
+(Only Important columsn extracted for display)
+|   recipe_id | submitted           |   num_tags |   average_rating |   average_rating_per_recipe |
+|------------:|:--------------------|-----------:|-----------------:|----------------------------:|
+|      333281 | 2008-10-27 00:00:00 |         14 |              4.5 |                           4 |
+|      453467 | 2011-04-11 00:00:00 |          9 |              5   |                           5 |
+|      306168 | 2008-05-30 00:00:00 |         10 |              4.6 |                           5 |
+|      306168 | 2008-05-30 00:00:00 |         10 |              4.6 |                           5 |
+|      306168 | 2008-05-30 00:00:00 |         10 |              4.6 |                           5 |
 
 
 
