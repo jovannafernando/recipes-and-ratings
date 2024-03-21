@@ -1,4 +1,4 @@
-# recipes-and-ratings
+# Palate Perspectives: Exploring Recipe Ratings!
 **Authors: Jovanna Fernando and Sia Patodia**
 <hr>
 
@@ -16,7 +16,7 @@ Understanding what affects recipe ratings is crucial for anyone who enjoys cooki
 **Number of Rows:**
 **Relevant Columns:**
 
-	---
+<hr>
 
 ## Data Cleaning and Exploratory Data Analysis
 
@@ -51,35 +51,35 @@ Distribution of Ratings
   frameborder="0"
 ></iframe>
 
-	---
+<hr>
 
 ## Assessment of Missingness
 [Discuss how missing data was handled and assessed in the dataset.]
 
-	---
+<hr>
 
 ## Hypothesis Testing
 [Explain the hypothesis testing conducted in the project.]
 
-	---
+<hr>
 
 ## Framing a Prediction Problem
 [Detail the process of framing a prediction problem in the project.]
 
-	---
+<hr>
 
 ## Baseline Model
 [Describe the development and evaluation of the baseline model.]
 
-	---
+<hr>
 
 ## Final Model
 [Discuss the development and evaluation of the final model.]
 
-	---
+<hr>
 
 ## Fairness Analysis
 [Provide an analysis of fairness considerations in the project.]
 
-	---
+<hr>
 
