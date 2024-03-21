@@ -72,6 +72,7 @@ The collected data is organized into tabular formats as descriped below:
 
 
 **Cleaned DataFrame Head**
+
 (Only Important columsn extracted for display)
 
 |   recipe_id | submitted           |   num_tags |   average_rating |   average_rating_per_recipe |
@@ -82,7 +83,28 @@ The collected data is organized into tabular formats as descriped below:
 |      306168 | 2008-05-30 00:00:00 |         10 |              4.6 |                           5 |
 |      306168 | 2008-05-30 00:00:00 |         10 |              4.6 |                           5 |
 
+All the columns and it's data types are listed below
 
+|    Column name            | Data Type      |
+|---------------------------|----------------|
+| name                      | object         |
+| recipe_id                 | int64          |
+| minutes                   | int64          |
+| contributor_id            | int64          |
+| submitted                 | datetime64[ns] |
+| tags                      | object         |
+| nutrition                 | object         |
+| n_steps                   | int64          |
+| steps                     | object         |
+| description               | object         |
+| ingredients               | object         |
+| n_ingredients             | int64          |
+| date                      | datetime64[ns] |
+| rating                    | float64        |
+| review                    | object         |
+| average_rating            | float64        |
+| average_rating_per_recipe | float64        |
+| num_tags                  | int64          |
 
 
 ### Univariate Analysis
