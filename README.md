@@ -117,7 +117,6 @@ All the columns and it's data types are listed below
   height="600"
   frameborder="0"
 ></iframe>
-
 **Average Rating of Contributors Distribution:** Illustrated here is the distribution of average ratings contributed by users. The majority of ratings cluster around the higher end, suggesting a general positive sentiment towards recipes, with a central tendency around 4.7.
 <iframe
   src="assets/averageratingdist.html"
@@ -125,7 +124,6 @@ All the columns and it's data types are listed below
   height="600"
   frameborder="0"
 ></iframe>
-
 **Number of Tags Distribution:** Displayed in this plot is the distribution of the number of tags associated with recipes. It reveals a normal distribution centered around approximately 16 tags, offering insights into common tagging practices among recipes.
 <iframe
   src="assets/num_tagsdist.html"
@@ -140,10 +138,9 @@ In this scatter plot, each point represents the average rating of all recipes wi
 <iframe
   src="assets/bivariate.html"
   width="800"
-  height="600"
+  height="200"
   frameborder="0"
 ></iframe>
-
 <hr>
 
 ## Assessment of Missingness
