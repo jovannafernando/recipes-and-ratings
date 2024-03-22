@@ -143,13 +143,39 @@ In this scatter plot, each point represents the average rating of all recipes wi
 ></iframe>
 <hr>
 
+### Interesting Aggregates
+<font color="red"> i'm not sure what to write here???</font>
+
+
+
 ## Assessment of Missingness
-[Discuss how missing data was handled and assessed in the dataset.]
+<font color="red"> i'm not sure what to write here???</font>
 
 <hr>
 
 ## Hypothesis Testing
-[Explain the hypothesis testing conducted in the project.]
+
+### Permutation Test
+
+**Null Hypothesis (H0):** There is no significant difference in the average rating of recipes between those with a small number of tags and those with a large number of tags.
+
+**Alternative Hypothesis (H1):** Recipes with a large number of tags have a significantly higher average rating than recipes with a small number of tags.
+
+By conducting permutation testing, we can objectively assess whether the observed difference in mean ratings is statistically significant, providing valuable insights into the relationship between the number of tags and recipe ratings.
+
+**Choice of Test Statistic:** Difference in mean ratings between recipes with a large number of tags and those with a small number of tags.
+**Choice of Significance Level (α):** 0.05 (standard practice)
+
+The chosen significance level of 0.05 is commonly used in testing and provides a balance between Type I and Type II errors.
+The test statistic, difference in mean ratings, is appropriate for comparing the average ratings between two categories.
+<iframe
+  src="assets/hypothesistest.html"
+  width="800"
+  height="300"
+  frameborder="0"
+></iframe>
+
+**Conclusion:** Since the p-value (0.026) is less than the significance level (0.05), we reject the null hypothesis. We conclude that there is evidence to suggest that recipes with a large number of tags have a significantly higher average rating than recipes with a small number of tags.
 
 <hr>
 
