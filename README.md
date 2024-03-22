@@ -177,10 +177,7 @@ Alternative Hypothesis (H1): There is a relationship between the duration of pre
 Result: Fail to reject the null hypothesis.
 Interpretation: There is insufficient evidence to suggest a relationship between the duration of preparation (minutes) and the presence of a description in recipes. The duration of preparation does not appear to significantly influence whether a recipe has a description or not.
 
-
-
-
-These are the plots
+These are the plots:
 
 <iframe
   src="assets/missngnesstest.html"
@@ -196,7 +193,7 @@ These are the plots
   frameborder="0"
 ></iframe>
 
-Therefore we belive that it's MAR as it depemds on the n_ingredients column
+Therefore, we believe that it's Missing At Random (MAR) as it depends on the n_ingredients column.
 
 <hr>
 
