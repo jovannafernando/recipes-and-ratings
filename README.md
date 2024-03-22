@@ -14,8 +14,6 @@ We aim to uncover the key factors that contribute to the ratings assigned to rec
 
 ### All about the dataset!
 
-<font color="red"> Why should readers of your website care about the dataset ???</font>
-
 **Data Sources:**
 The dataset used in this analysis is sourced from food.com, a popular online platform dedicated to sharing recipes, cooking tips, and culinary inspiration.
 Food.com hosts a vast collection of user-contributed recipes spanning various cuisines, dietary preferences, and cooking styles.
@@ -50,7 +48,7 @@ The collected data is organized into tabular formats as descriped below:
 - **Review:** Textual feedback or comments accompanying the rating.
 - **Average Rating:** Average rating of each contributor.
 
-<font color="red">In out study we focused on the number of tags?? need to write soemthing here</font>
+
 
 <hr>
 
@@ -144,12 +142,61 @@ In this scatter plot, each point represents the average rating of all recipes wi
 <hr>
 
 ### Interesting Aggregates
-<font color="red"> i'm not sure what to write here???</font>
+We decided to create a pivot table of number of tags against the number of steps(which we placed in bins). We decided to create this aggregate to show the relation between the num_tags and steps and to see if it follows our intuition that the number of steps would increase as the number of tags increases(and vice versa) on average, as this implies our recipe is more complex. From our graph, we can see that over a range, our intuition was correct. (Please note only a protion of teh dataframe is potrayed here)
 
+|   num_tags |   0-5 |   6-10 |   11-15 |   16-20 |   21-25 |   26-30 |   31-35 |   36-40 |   41-45 |   46-50 |
+|-----------:|------:|-------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|
+|          1 |    26 |    119 |      68 |       8 |      11 |       5 |       1 |       0 |       0 |       0 |
+|          2 |     7 |     14 |      15 |      17 |       2 |      14 |       0 |       0 |       2 |       1 |
+|          3 |    84 |    880 |     699 |     344 |     156 |      58 |      16 |      11 |       9 |       1 |
+|          4 |    16 |     89 |      75 |      43 |      29 |      11 |       2 |       0 |       2 |       1 |
+|          5 |   304 |   1446 |    1084 |     497 |     188 |     130 |      17 |       9 |       7 |       5 |
 
 
 ## Assessment of Missingness
 
+We belive that review is NMAR. We chose to investigate review because a lot of people prefer leaving a rating over actually typing out a review. There is a very small proportion of people who have a drive strong enough to type out something, until and unless people really hate or love a recipe, they either just leave a rating or completely disregard the review/rating. Thus, in order to make it MAR, we could show some dependency on the rating column.
+
+
+We want to exploe the misisgness of the description column
+
+For the permutation test between n_ingredients and description missingness:
+
+Null Hypothesis (H0): The number of ingredients is not related to the presence of a description in recipes.
+Alternative Hypothesis (H1): The number of ingredients is related to the presence of a description in recipes.
+
+Result: Reject the null hypothesis.
+Interpretation: There is evidence to suggest that the number of ingredients is related to the presence of a description in recipes. Recipes with a higher number of ingredients are more likely to have a description, while recipes with fewer ingredients are less likely to have a description.
+
+
+For the permutation test between minutes and description missingness:
+
+Null Hypothesis (H0): There is no relationship between the duration of preparation (minutes) and the presence of a description in recipes.
+Alternative Hypothesis (H1): There is a relationship between the duration of preparation (minutes) and the presence of a description in recipes.
+
+Result: Fail to reject the null hypothesis.
+Interpretation: There is insufficient evidence to suggest a relationship between the duration of preparation (minutes) and the presence of a description in recipes. The duration of preparation does not appear to significantly influence whether a recipe has a description or not.
+
+
+
+
+These are the plots
+
+<iframe
+  src="assets/missignesstest.html"
+  width="900"
+  height="300"
+  frameborder="0"
+></iframe>
+
+<iframe
+  src="assets/missingnessbar.html"
+  width="900"
+  height="300"
+  frameborder="0"
+></iframe>
+
+Therefore we belive that it's MAR as it depemds on the n_ingredients column
 
 <hr>
 
@@ -179,8 +226,6 @@ The test statistic, difference in mean ratings, is appropriate for comparing the
 **Conclusion:** Since the p-value (0.026) is less than the significance level (0.05), we reject the null hypothesis. We conclude that there is evidence to suggest that recipes with a large number of tags have a significantly higher average rating than recipes with a small number of tags.
 
 <hr>
-
-
 
 ## Framing a Prediction Problem
 Prediction problem: predict rating of recipes
