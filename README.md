@@ -144,7 +144,7 @@ In this scatter plot, each point represents the average rating of all recipes wi
 ### Interesting Aggregates
 We decided to create a pivot table of number of tags against the number of steps(which we placed in bins). We decided to create this aggregate to show the relation between the num_tags and steps and to see if it follows our intuition that the number of steps would increase as the number of tags increases(and vice versa) on average, as this implies our recipe is more complex. From our graph, we can see that over a range, our intuition was correct. (Please note only a protion of teh dataframe is potrayed here)
 
-|   num_tags |   0-5 |   6-10 |   11-15 |   16-20 |   21-25 |   26-30 |   31-35 |   36-40 |   41-45 |   46-50 |
+|  (index -num_tags) step_bins |   0-5 |   6-10 |   11-15 |   16-20 |   21-25 |   26-30 |   31-35 |   36-40 |   41-45 |   46-50 |
 |-----------:|------:|-------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|
 |          1 |    26 |    119 |      68 |       8 |      11 |       5 |       1 |       0 |       0 |       0 |
 |          2 |     7 |     14 |      15 |      17 |       2 |      14 |       0 |       0 |       2 |       1 |
