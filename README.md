@@ -134,8 +134,8 @@ All the columns and it's data types are listed below
 
 <iframe
   src="assets/num_tagsdist.html"
-  width="400"
-  height="300"
+  width="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
