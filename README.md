@@ -111,7 +111,6 @@ All the columns and it's data types are listed below
 ### Univariate Analysis
 
 **Ratings Distribution:** This visualization depicts the frequency of different rating scores assigned to recipes. Notably, higher ratings appear to be more prevalent, indicating a positive trend in user evaluations.
-
 <iframe
   src="assets/ratingdist.html"
   width="800"
@@ -119,9 +118,7 @@ All the columns and it's data types are listed below
   frameborder="0"
 ></iframe>
 
-
 **Average Rating of Contributors Distribution:** Illustrated here is the distribution of average ratings contributed by users. The majority of ratings cluster around the higher end, suggesting a general positive sentiment towards recipes, with a central tendency around 4.7.
-
 <iframe
   src="assets/averageratingdist.html"
   width="800"
@@ -129,9 +126,7 @@ All the columns and it's data types are listed below
   frameborder="0"
 ></iframe>
 
-
 **Number of Tags Distribution:** Displayed in this plot is the distribution of the number of tags associated with recipes. It reveals a normal distribution centered around approximately 16 tags, offering insights into common tagging practices among recipes.
-
 <iframe
   src="assets/num_tagsdist.html"
   width="800"
@@ -139,11 +134,9 @@ All the columns and it's data types are listed below
   frameborder="0"
 ></iframe>
 
-
 ### Bivariate Analysis
 
 In this scatter plot, each point represents the average rating of all recipes with a specific number of tags. The x-axis indicates the number of tags associated with recipes, while the y-axis represents the average rating of those recipes. The plot suggests a positive association between the number of tags and the average rating, indicating that recipes with more tags tend to have higher average ratings. This trend suggests that recipes with a greater variety of tags may be perceived more positively by users.
-
 <iframe
   src="assets/bivariate.html"
   width="800"
