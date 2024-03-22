@@ -155,10 +155,10 @@ We decided to create a pivot table of number of tags against the number of steps
 
 ## Assessment of Missingness
 
-We belive that review is NMAR. We chose to investigate review because a lot of people prefer leaving a rating over actually typing out a review. There is a very small proportion of people who have a drive strong enough to type out something, until and unless people really hate or love a recipe, they either just leave a rating or completely disregard the review/rating. Thus, in order to make it MAR, we could show some dependency on the rating column.
+We belive that review is NMAR. We chose to investigate review because a lot of people prefer leaving a rating over actually typing out a review. There is a very small proportion of people who have a drive strong enough to type out something, until and unless people really hate or love a recipe, they either just leave a rating or completely disregard the review/rating. Thus, in order to make it MAR, we could show some dependency on the rating column for review.
 
 
-We want to exploe the misisgness of the description column
+We want to explore the missingness of the description column
 
 For the permutation test between n_ingredients and description missingness:
 
@@ -251,11 +251,11 @@ Although the scores are relatively low, since they are so close to each other, o
 
 ## Final Model
 The features we added are as follows:
-1. **description**: 
+1. **Description**: 
    - We decided to TFIDF vectorize the description column as we believed specific words in the description tend to have a greater appeal and thus lead to a higher rating.
 2. **Total ingredients**: 
    - We created a pipeline for the ingredients column with total ingredients as well as top ingredients from our pipeline as the number of ingredients could have some relation the the rating- in general, people prefer recipes with lesser ingredients.
-3. **submitted**: 
+3. **Submitted**: 
    - We also ordinal ended the year from submitted column as our intuition suggested newer recipes would be more fine tuned and thus better.
 4. **Nutrients**: 
    - We split the nutrients into 'calories', 'total fat', 'sugar', 'sodium', 'protein', 'saturated fat', 'carbohydrates’ and simply called all numeric columns in our Column Transformer so as to account for nutrition value in our recipes too as people tend to prefer similar recipes with better health benefits.
