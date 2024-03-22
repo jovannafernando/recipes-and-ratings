@@ -164,6 +164,7 @@ In this scatter plot, each point represents the average rating of all recipes wi
 By conducting permutation testing, we can objectively assess whether the observed difference in mean ratings is statistically significant, providing valuable insights into the relationship between the number of tags and recipe ratings.
 
 **Choice of Test Statistic:** Difference in mean ratings between recipes with a large number of tags and those with a small number of tags.
+
 **Choice of Significance Level (α):** 0.05 (standard practice)
 
 The chosen significance level of 0.05 is commonly used in testing and provides a balance between Type I and Type II errors.
@@ -182,12 +183,27 @@ The test statistic, difference in mean ratings, is appropriate for comparing the
 
 
 ## Framing a Prediction Problem
-[Detail the process of framing a prediction problem in the project.]
+Prediction problem: predict rating of recipes
+
+We are building a multi-class classifier as rating of a recipe can be any value from 0 to 5
+
+The variable we are predicting is rating. We decided to use rating since in terms of our dataset, we found it the most valuable to determine - for contributors as they will know how to best improve their recipes, as well as for users as they would know which recipes posted are the best. Rating has some relation with almost every other column, therefore, predicting rating was the best choice for our model. 
+
+The metric we are using to evaluate our model is F1-score. Since our model is using a multi-class classifier, the f1 score accounts for both precision and recall and thus will give us a better evaluation of our model.  Accuracy is very dependent on the training/testing dataset. Since this is a multi-class classifier, a lot of variables affect the prediction, thus, F1-score can help provide a more balanced output. Although we got a higher evaluation using accuracy, we decided to keep the F-1 score since it tends to be more robust to changes and with such a dataset where a lot of the ratings are also based on personal preference, we chose a metric hat would account for robustness. since our class is imbalances ie we have a higher rating of 4 and 5, choosing accuracy would not be very indicative of the model as we could predict all ratings to be 4 or 5 and still get a high accuracy
+
+At the time of prediction, we are guaranteed to have the list of ingredients, time for cooking, nutrition value and description of the recipe as these are all posted by the contributor. Thus, our main model is using these to predict the ratings. 
 
 <hr>
 
 ## Baseline Model
-[Describe the development and evaluation of the baseline model.]
+Our pipeline uses ingredients and minutes to predict the rating. We decided to start off with these two variables, since from our Eda, we found the ingredients and time for a recipe had some r=correlation with rating. 
+Quantitative: minutes
+Nominal: ingredients - we found the top N most common ingredients used in our dataset as the most common ingredients would be included in the most popular recipes
+Ordinal: minutes -  although minutes is a quantitative column, we decided to ordinal encode is as minutes in itself was not a good prediction. From on of our previous plots, we saw that minutes and rating tend to have a higher correlation for minutes between 20-60. For recipes that take too long or too less time, the ratings tend to be lower. Thus, we decide to ordinal encode it by putting minutes in bins
+
+Training F1 Score: 0.6772
+Test F1 Score: 0.6777
+Although the scores are relatively low, since they are so close to each other, our model is training and testing well as it is not overfitting to the training data. Although accuracy was giving us a higher score(about 77%, we decide to stick with F1 scoring.). The low score could be due to the fact that we have used only 2 out of the multiple features which could affect rating. Thus, as a base, our model is “good” and sets the framework for improvement in our final model. 
 
 <hr>
 
@@ -200,4 +216,9 @@ The test statistic, difference in mean ratings, is appropriate for comparing the
 [Provide an analysis of fairness considerations in the project.]
 
 <hr>
+
+
+
+
+ 
 
