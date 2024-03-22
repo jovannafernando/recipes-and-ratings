@@ -183,14 +183,14 @@ Interpretation: There is insufficient evidence to suggest a relationship between
 These are the plots
 
 <iframe
-  src="assets/missignesstest.html"
+  src="assets/missngnesstest.html"
   width="900"
   height="300"
   frameborder="0"
 ></iframe>
 
 <iframe
-  src="assets/missingnessbar.html"
+  src="assets/missngnessbar.html"
   width="900"
   height="300"
   frameborder="0"
@@ -253,7 +253,21 @@ Although the scores are relatively low, since they are so close to each other, o
 <hr>
 
 ## Final Model
-[Discuss the development and evaluation of the final model.]
+The features we added are as follows:
+1. **description**: 
+   - We decided to TFIDF vectorize the description column as we believed specific words in the description tend to have a greater appeal and thus lead to a higher rating.
+2. **Total ingredients**: 
+   - We created a pipeline for the ingredients column with total ingredients as well as top ingredients from our pipeline as the number of ingredients could have some relation the the rating- in general, people prefer recipes with lesser ingredients.
+3. **submitted**: 
+   - We also ordinal ended the year from submitted column as our intuition suggested newer recipes would be more fine tuned and thus better.
+4. **Nutrients**: 
+   - We split the nutrients into 'calories', 'total fat', 'sugar', 'sodium', 'protein', 'saturated fat', 'carbohydrates’ and simply called all numeric columns in our Column Transformer so as to account for nutrition value in our recipes too as people tend to prefer similar recipes with better health benefits.
+
+Our model performed slightly better as we got an F1 score of: 
+- Training F1 Score: 0.6773
+- Test F1 Score: 0.6802
+
+However, although we assumed including those features would help better predict our rating, it did not drastically improve our F1 score. However, we saw a ~2% increase in both testing and training accuracy.
 
 <hr>
 
