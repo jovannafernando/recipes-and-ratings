@@ -114,8 +114,8 @@ All the columns and it's data types are listed below
 
 <iframe
   src="assets/ratingdist.html"
-  width="400"
-  height="300"
+  width="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -124,8 +124,8 @@ All the columns and it's data types are listed below
 
 <iframe
   src="assets/averageratingdist.html"
-  width="400"
-  height="300"
+  width="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
@@ -146,8 +146,8 @@ In this scatter plot, each point represents the average rating of all recipes wi
 
 <iframe
   src="assets/bivariate.html"
-  width="400"
-  height="300"
+  width="800"
+  height="600"
   frameborder="0"
 ></iframe>
 
