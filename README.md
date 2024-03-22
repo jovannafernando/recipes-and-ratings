@@ -149,7 +149,7 @@ In this scatter plot, each point represents the average rating of all recipes wi
 
 
 ## Assessment of Missingness
-<font color="red"> i'm not sure what to write here???</font>
+
 
 <hr>
 
@@ -171,7 +171,7 @@ The chosen significance level of 0.05 is commonly used in testing and provides a
 The test statistic, difference in mean ratings, is appropriate for comparing the average ratings between two categories.
 <iframe
   src="assets/hypothesistest.html"
-  width="800"
+  width="900"
   height="300"
   frameborder="0"
 ></iframe>
@@ -213,7 +213,22 @@ Although the scores are relatively low, since they are so close to each other, o
 <hr>
 
 ## Fairness Analysis
-[Provide an analysis of fairness considerations in the project.]
+
+Choice of Group X: Recipes with short preparation time (less than 45 minutes).
+Choice of Group Y: Recipes with long preparation time (45 minutes or more).
+
+Evaluation Metric: Precision Score (weighted average)
+
+Null Hypothesis (H0): The precision score for recipes with short preparation time is not significantly different from the precision score for recipes with long preparation time.
+
+Alternative Hypothesis (H1): The precision score for recipes with short preparation time is significantly different (either higher or lower) from the precision score for recipes with long preparation time.
+
+Test Statistic: Difference in precision scores between recipes with short and long preparation times.
+Significance Level: 0.05
+
+Conclusion: If the p-value is less than the significance level (0.05), we reject the null hypothesis and conclude that there is a significant difference in precision scores between recipes with short and long preparation times.
+If the p-value is greater than or equal to the significance level, we fail to reject the null hypothesis, indicating no significant difference in precision scores between the two groups.
+
 
 <hr>
 
