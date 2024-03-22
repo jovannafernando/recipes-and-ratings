@@ -114,21 +114,21 @@ All the columns and it's data types are listed below
 <iframe
   src="assets/ratingdist.html"
   width="800"
-  height="600"
+  height="300"
   frameborder="0"
 ></iframe>
 **Average Rating of Contributors Distribution:** Illustrated here is the distribution of average ratings contributed by users. The majority of ratings cluster around the higher end, suggesting a general positive sentiment towards recipes, with a central tendency around 4.7.
 <iframe
   src="assets/averageratingdist.html"
   width="800"
-  height="600"
+  height="300"
   frameborder="0"
 ></iframe>
 **Number of Tags Distribution:** Displayed in this plot is the distribution of the number of tags associated with recipes. It reveals a normal distribution centered around approximately 16 tags, offering insights into common tagging practices among recipes.
 <iframe
   src="assets/num_tagsdist.html"
   width="800"
-  height="600"
+  height="300"
   frameborder="0"
 ></iframe>
 
@@ -138,7 +138,7 @@ In this scatter plot, each point represents the average rating of all recipes wi
 <iframe
   src="assets/bivariate.html"
   width="800"
-  height="200"
+  height="300"
   frameborder="0"
 ></iframe>
 <hr>
@@ -152,6 +152,8 @@ In this scatter plot, each point represents the average rating of all recipes wi
 [Explain the hypothesis testing conducted in the project.]
 
 <hr>
+
+
 
 ## Framing a Prediction Problem
 [Detail the process of framing a prediction problem in the project.]
